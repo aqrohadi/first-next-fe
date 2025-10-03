@@ -6,18 +6,28 @@ export default function OfficeSpaceDetailPage() {
         <>
             <Navbar />
             <section id="Gallery" className="-mb-[50px]">
-                <div className="swiper w-full">
-                <div className="swiper-wrapper">
-                    <div className="swiper-slide !w-fit">
+                <div className="flex gap-6 w-full">
                     <div className="w-[700px] h-[550px] overflow-hidden">
                         <img
-                        src="/assets/images/thumbnails/thumbnail-details-1.png"
-                        className="w-full h-full object-cover"
-                        alt="thumbnail"
+                            src="/assets/images/thumbnails/thumbnail-details-1.png"
+                            className="w-full h-full object-cover"
+                            alt="thumbnail"
                         />
                     </div>
+                    <div className="w-[700px] h-[550px] overflow-hidden">
+                        <img
+                            src="/assets/images/thumbnails/thumbnail-details-2.png"
+                            className="w-full h-full object-cover"
+                            alt="thumbnail"
+                        />
                     </div>
-                </div>
+                    <div className="w-[700px] h-[550px] overflow-hidden">
+                        <img
+                            src="/assets/images/thumbnails/thumbnail-details-3.png"
+                            className="w-full h-full object-cover"
+                            alt="thumbnail"
+                        />
+                    </div>
                 </div>
             </section>
             <section

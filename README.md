@@ -38,3 +38,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # first-next-fe 
 First Commit
 Slicing Component Navbar Page and Section
+
+Feat : 
+- city types, mock data, card
+- props city component
+- crousel swiper
+- data mock office space
+- props data office city
