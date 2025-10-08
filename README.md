@@ -45,3 +45,12 @@ Feat :
 - crousel swiper
 - data mock office space
 - props data office city
+
+Feat 2 : 
+- params data dan city details
+- tampilkan data details office
+- conditional rendering by data
+- sales contact card dan props
+- swiper next galery office
+- data dinamis office features
+- bug fixing params dan CTA
