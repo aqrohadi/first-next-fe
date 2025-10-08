@@ -4,10 +4,50 @@ import { notFound } from "next/navigation";
 import { OfficeSpaceCard } from "@/features/offices/components/OfficeSpaceCard";
 import { officeSpace } from "@/features/offices/data/officeSpace.mock";
 import Image from "next/image";
+import { Metadata } from "next";
 
 type Props = {
     params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    
+    const { slug } = await params;
+
+    const city = cities.find((items) => items.slug === slug);
+
+    if (!city) {
+        return {
+            title: "City not found",
+            description: "The requested city could not be found.",
+        }
+    }
+
+    const fullImageUrl = city.image.startsWith('http')
+        ? city.image
+        : `https://imamaqrom.com${city.image}`;
+
+    return {
+        title: {
+            absolute: `${city.name} - Office`,
+        },
+        description: `Cari Kantor Terbaik Di ${city.name}.`,
+        openGraph: {
+            title: `${city.name} - Office Space`,
+            description: `Temukan Ruang Kantor Di Kota ${city.name}.`,
+            images: [fullImageUrl],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${city.name} - Office Space`,
+            description: `Temukan Ruang Kantor Di Kota ${city.name}.`,
+            images: [fullImageUrl],
+        },
+        alternates: {
+            canonical: `https://imamaqrom.com/city/${city.slug}`,
+        },
+    };
+}
 
 export default async function CityPage({ params }: Props) {
     const { slug } = await params;

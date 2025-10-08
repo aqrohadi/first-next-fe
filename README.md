@@ -54,3 +54,10 @@ Feat 2 :
 - swiper next galery office
 - data dinamis office features
 - bug fixing params dan CTA
+
+Deploy :
+- Last Make SEO SCRIPT for Page ( Optional )
+- fixing every running project opened on terminal on see status or code word
+- npm run bulid (Checked Error or Problem Script)
+- Push Git Last Updated
+- Vercel Choose Repo (Main or Last Updated) to Publish 
