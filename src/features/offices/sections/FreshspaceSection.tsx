@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { OfficeSpaceCard } from "../components/OfficeSpaceCard";
-import { officeSpaces } from "../data/officeSpace.mock";
+import { officeSpace } from "../data/officeSpace.mock";
 
 export default function FreshspaceSection() {
   return (
@@ -12,7 +12,7 @@ export default function FreshspaceSection() {
         For Your Better Productivity.
       </h2>
       <div className="grid grid-cols-3 gap-[30px]">
-        {officeSpaces.map((office) => (
+        {officeSpace.map((office) => (
           <OfficeSpaceCard key={office.id} space={office} />
         ))}
       </div>

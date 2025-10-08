@@ -3,6 +3,7 @@ export type OfficeSpace = {
     title: string;
     slug: string;
     price: number;
+    phone: string;
     duration: string;
     address: string;
     about: string;
@@ -21,3 +22,9 @@ export type SalesContact = {
     role: string;
     photo: string;
 };
+
+export type Contact = {
+    name: string;
+    role: string;
+    photo: string;
+}
