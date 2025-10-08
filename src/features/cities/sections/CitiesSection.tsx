@@ -1,9 +1,14 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
+import { CityCard } from "../components/CityCard";
+import { cities } from "../data/cities.mock";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { use } from "react";
 
 export default function CitiesSection() {
     return (
-        <section id="Cities" className="flex flex-col gap-[30px] mt-[100px]">
+        <section id="" className="flex flex-col gap-[30px] mt-[100px]">
             <div className="w-full max-w-[1130px] mx-auto flex items-center justify-between">
             <h2 className="font-bold text-[32px] leading-[48px] text-nowrap">
                 You Can Choose <br />
@@ -16,29 +21,21 @@ export default function CitiesSection() {
                 Explore All City
             </Link>
             </div>
-            <div className="swiper w-full">
+            <Swiper
+                spaceBetween={30}
+                slidesOffsetAfter={30}
+                slidesOffsetBefore={30}
+                slidesPerView="auto"
+                className="swiper w-full"
+            >
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-                        <Link href="#" className="card">
-                            <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
-                            <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
-                                <h3 className="font-bold text-xl leading-[30px] text-white">
-                                Jakarta Pusat
-                                </h3>
-                                <p className="text-white">189 Offices</p>
-                            </div>
-                            <Image 
-                                src="/assets/images/thumbnails/thumbnails-2.png"
-                                className="absolute w-full h-full object-cover"
-                                width={230}
-                                height={300}
-                                alt="thumbnails"
-                            />
-                            </div>
-                        </Link>
-                    </div>
+                    {cities.map((city) => (
+                        <SwiperSlide key={city.id} className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
+                            <CityCard city={city} />
+                        </SwiperSlide>
+                    ))}
                 </div>
-            </div>
+            </Swiper>
         </section>
     );
 }

@@ -38,3 +38,26 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # first-next-fe 
 First Commit
 Slicing Component Navbar Page and Section
+
+Feat : 
+- city types, mock data, card
+- props city component
+- crousel swiper
+- data mock office space
+- props data office city
+
+Feat 2 : 
+- params data dan city details
+- tampilkan data details office
+- conditional rendering by data
+- sales contact card dan props
+- swiper next galery office
+- data dinamis office features
+- bug fixing params dan CTA
+
+Deploy :
+- Last Make SEO SCRIPT for Page ( Optional )
+- fixing every running project opened on terminal on see status or code word
+- npm run bulid (Checked Error or Problem Script)
+- Push Git Last Updated
+- Vercel Choose Repo (Main or Last Updated) to Publish 
